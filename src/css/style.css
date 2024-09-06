@@ -114,6 +114,23 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.div-left::after, .div-left::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 255, 221);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 45px;
+}
+.div-left::before {
+    filter: blur(1rem);
+    opacity: 0.8;
 }
 
 .div-left img {
@@ -229,4 +246,26 @@ button.dark-theme {
     color: white;
 }
 
-/*//*/
+
+/* // */
+/* SMARTPHONE */
+/* // */
+
+@media(max-width: 800px){
+    /* header */
+
+    .div-left{
+        float: none;
+        width: 100%;
+    }
+    .div-right_light-theme_{
+        height: max-content;
+        width: 100%;
+        float: none;
+    }
+    .div-middle_light-theme_{
+        height: max-content;
+        width: 100%;
+        float: none;
+    }
+}
