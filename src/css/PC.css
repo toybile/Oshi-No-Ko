@@ -1,0 +1,247 @@
+:root {
+    --scrollbar-width: 6px;
+    --scrollbar-thumb-bg: azure;
+    --scrollbar-thumb-border: 2px solid rgb(255, 217, 0);
+    --scrollbar-thumb-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+
+    --custom-padding-right: 0px;
+}
+
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(111, 0, 255);
+    padding-right: var(--custom-padding-right);
+}
+ /* scroll-bar */
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(111, 0, 255);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-bg);
+    border-radius: 10px;
+    border: var(--scrollbar-thumb-border);
+    box-shadow: var(--scrollbar-thumb-box-shadow);
+}
+/**/
+
+/*//*/
+/* Header */
+
+header {
+    background-color: rgb(150, 81, 240);
+    width: 100%;
+    height: 100px;
+    margin: 1% 0% 3% 0%;
+    border-radius: 40px;
+    border: 2px dotted white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.div-header {
+    margin: 0% 1% 0% 1%;
+}
+
+/* nav - Header */
+
+nav {
+    width: 95%;
+}
+
+/* ul - Header */
+
+.ul-h {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ul-h li {
+    float: left;
+    list-style-type: none;
+}
+
+.ul-h a {
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px 45px;
+    color: black;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+}
+
+.ul-h a:hover {
+    border: 1px solid black;
+    outline: 1px solid white;
+    border-radius: 10px;
+    text-shadow: rgb(47, 0, 255) 1px 0 10px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*//*/
+/* DIVs - 9 */
+
+.margin-divs {
+    margin: 0px 3%;
+}
+
+.margin-divs::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.div-left {
+    background-color: black;
+    width: 30%;
+    height: 300px;
+    border-radius: 45px;
+    padding: 0.5%;
+    float: left;
+    margin: 1.33% 1.5%;
+    border: 3px solid rgb(0, 255, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.div-left::after, .div-left::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 255, 221);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 45px;
+}
+.div-left::before {
+    filter: blur(1rem);
+    opacity: 0.8;
+}
+
+.div-left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 40px;
+}
+
+.div-right_light-theme_ {
+    background-color: rgb(235, 160, 125);
+    width: 30%;
+    height: 300px;
+    border-radius: 45px;
+    padding: 0.5%;
+    float: left;
+    margin: 1.33% 1.5%;
+    border: 4px dashed rgb(255, 81, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    padding: 1% 1.9%;
+}
+
+.div-middle_light-theme_ {
+    background-color: rgb(233, 122, 218);
+    width: 30%;
+    height: 300px;
+    border-radius: 45px;
+    padding: 0% 0% 0% 3%;
+    float: left;
+    margin: 1.33% 1.5%;
+    border: 4px dashed rgb(255, 0, 234);
+    display: flex;
+    align-items: center;
+}
+
+/* ul - div-middle */
+.margin-ul {
+    margin: 5% 0%;
+}
+
+.ul-m {
+    font-size: x-large;
+}
+
+.ul-m li {
+    line-height: 2.2;
+}
+/**/
+
+/*//*/
+/* Footer */
+
+footer img {
+    width: 30px;
+}
+
+/* button */
+
+button.light-theme, button.dark-theme {
+    border-radius: 20px;
+    padding: 2px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    bottom: 13px;
+    right: 16px;
+}
+
+button.light-theme {
+    border: 2px solid rgb(255, 217, 0);
+}
+
+/*//*/
+/* DARK THEME */
+
+button.dark-theme {
+    background: none;
+    border: 2px solid black;
+    box-shadow: inset 0px 0px 5px black;
+}
+
+.div-right_dark-theme_ {
+    background-color: black;
+    width: 30%;
+    height: 300px;
+    border-radius: 45px;
+    padding: 0.5%;
+    float: left;
+    margin: 1.33% 1.5%;
+    border: 4px dashed rgb(255, 81, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    padding: 1% 1.9%;
+    color: white;
+}
+
+.div-middle_dark-theme_ {
+    background-color: black;
+    width: 30%;
+    height: 300px;
+    border-radius: 45px;
+    padding: 0% 0% 0% 3%;
+    float: left;
+    margin: 1.33% 1.5%;
+    border: 4px dashed rgb(255, 0, 234);
+    display: flex;
+    align-items: center;
+    color: white;
+}
